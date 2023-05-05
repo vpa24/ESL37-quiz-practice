@@ -23,6 +23,12 @@ footer {
   padding: 15px;
 }
 
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container.p-4 ol {
+    padding-left: 1rem !important;
+  }
+}
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
   .sidenav {
