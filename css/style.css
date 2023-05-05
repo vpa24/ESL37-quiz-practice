@@ -40,8 +40,9 @@ footer {
   }
 }
 
-li {
+.container.p-4 li {
   min-height: 28px;
+  padding: 5px 0;
 }
 /* input styles */
 input[type="text"] {
