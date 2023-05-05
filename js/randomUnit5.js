@@ -5,92 +5,92 @@ $(function () {
   var vocabulary = [
     {
       name: "countless",
-      defenition: "too many to be counted: very many",
+      definition: "too many to be counted: very many",
     },
     {
       name: "alley",
-      defenition: "a narrow street or passage between building",
+      definition: "a narrow street or passage between building",
     },
     {
       name: "audience",
-      defenition:
+      definition:
         "a group of people who gather together to listen to something or watch something",
     },
     {
       name: "immediately",
-      defenition: "without any delay",
+      definition: "without any delay",
     },
     {
       name: "round",
-      defenition: "a series of similar actions, events, activities, or things",
+      definition: "a series of similar actions, events, activities, or things",
     },
     {
       name: "fan",
-      defenition:
+      definition:
         "a person who likes and admires someone or something in a very enthusiastic way",
     },
     {
       name: "disgusting",
-      defenition:
+      definition:
         "so unpleasant to see, smell, taste, consider, etc.., that you feel slightly sick",
     },
     {
       name: "ton",
-      defenition:
+      definition:
         "a unit for measuring weight that equals 2,000 pounds (907 kilograms)",
     },
     {
       name: "layer",
-      defenition:
+      definition:
         "a form or arrange parts or pieces of something on top of each other",
     },
     {
       name: "tourist",
-      defenition: "of or relating to a tour, tourism, or tourist",
+      definition: "of or relating to a tour, tourism, or tourist",
     },
     {
       name: "distant",
-      defenition: "existing or happening far away in space: separated by space",
+      definition: "existing or happening far away in space: separated by space",
     },
     {
       name: "container",
-      defenition:
+      definition:
         "a large box that goods are placed in so that they can be moved from one place to another; an object that can hold something",
     },
     {
       name: "mobile",
-      defenition: "able to move from one place to another",
+      definition: "able to move from one place to another",
     },
     {
       name: "community",
-      defenition: "belonging or relating to a community as a whole",
+      definition: "belonging or relating to a community as a whole",
     },
     {
       name: "community",
-      defenition:
+      definition:
         "a group of people who are live in the same area; a group of people who have the same interests, religion, race, etc.",
     },
     {
-      name: "Founder",
-      defenition:
+      name: "founder",
+      definition:
         "a person who creates or establishes something that is meant for a long time (such as a business or school)",
     },
     {
-      name: "Success",
-      defenition: "the fact of getting or achieving wealth, respect, or fame",
+      name: "success",
+      definition: "the fact of getting or achieving wealth, respect, or fame",
     },
     {
-      name: "Treasure",
-      defenition: "Relating to something that is every important or valuable",
+      name: "treasure",
+      definition: "Relating to something that is every important or valuable",
     },
     {
-      name: "Design",
-      defenition:
+      name: "design",
+      definition:
         "the way something has been made: the way the parts of something are formed and arranged for a specific use, effect, etc.",
     },
     {
-      name: "Narrow",
-      defenition: "long and not wide: small from one side to the other side",
+      name: "narrow",
+      definition: "long and not wide: small from one side to the other side",
     },
   ];
 
@@ -119,17 +119,17 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
-  function displayDefenition(vocabulary) {
+  function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
     definitionList.forEach((word) => {
-      vocaText += `<li>${word.defenition}</li>`;
+      vocaText += `<li>${word.definition}</li>`;
     });
     vocaText += "</ol>";
-    document.getElementById("defenition").innerHTML = vocaText;
+    document.getElementById("definition").innerHTML = vocaText;
   }
   const randomVocabulary = randomWords(vocabulary);
-  displayDefenition(randomVocabulary);
+  displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
   $("#check").on("click", function () {
     var source = 0;
@@ -141,8 +141,8 @@ $(function () {
       const indexFromVocabulary = userAnswer.charCodeAt(0) - "a".charCodeAt(0);
       console.log(indexFromVocabulary);
       console.log(definitionList[indexFromVocabulary]);
-      const defenition = definitionList[indexFromVocabulary].name;
-      if (vocabularyList[index].name == defenition) {
+      const definition = definitionList[indexFromVocabulary].name;
+      if (vocabularyList[index].name == definition) {
         source++;
       } else {
         incorrectVocabulary.push(vocabularyList[index].name);
@@ -152,7 +152,7 @@ $(function () {
     $("#message span").html(`You are correct ${source}/10. `);
     if (source < 10) {
       $("#message span").append(
-        `You should learn the defenition of: <strong>${errorString}</strong> again.`
+        `You should learn the definition of: <strong>${errorString}</strong> again.`
       );
     } else {
       $("#message span").append(

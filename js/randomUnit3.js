@@ -5,83 +5,83 @@ $(function () {
   var vocabulary = [
     {
       name: "stare",
-      defenition: "look for a long time with the eyes wide open",
+      definition: "look for a long time with the eyes wide open",
     },
     {
       name: "in public",
-      defenition: "in the place where many people can hear it such as a park",
+      definition: "in the place where many people can hear it such as a park",
     },
     {
       name: "instant",
-      defenition: "happen immediately",
+      definition: "happen immediately",
     },
     {
       name: "bond",
-      defenition: "strong feeling of friendship",
+      definition: "strong feeling of friendship",
     },
     {
       name: "toodler",
-      defenition: "a young child learning to walk",
+      definition: "a young child learning to walk",
     },
     {
       name: "physical",
-      defenition: "relating to the body",
+      definition: "relating to the body",
     },
     {
       name: "reaction",
-      defenition: "way to react to something",
+      definition: "way to react to something",
     },
     {
       name: "relate to",
-      defenition: "connected something or someone",
+      definition: "connected something or someone",
     },
     {
       name: "difference",
-      defenition: "things that are not the same",
+      definition: "things that are not the same",
     },
     {
       name: "different",
-      defenition: "not the same",
+      definition: "not the same",
     },
     {
       name: "material",
-      defenition: "a physical subtance that things can be made from",
+      definition: "a physical subtance that things can be made from",
     },
     {
       name: "criticize",
-      defenition: "to express disapproval of someone or something",
+      definition: "to express disapproval of someone or something",
     },
     {
       name: "discouraged",
-      defenition: "lacking of confidence",
+      definition: "lacking of confidence",
     },
     {
       name: "sounds",
-      defenition: "something you can hear",
+      definition: "something you can hear",
     },
     {
       name: "planet",
-      defenition: "the earth",
+      definition: "the earth",
     },
     {
       name: "patience",
-      defenition: "the ability without complaint",
+      definition: "the ability without complaint",
     },
     {
       name: "overnight",
-      defenition: "during overnight",
+      definition: "during overnight",
     },
     {
       name: "ingore",
-      defenition: "intentionally listen or give attention",
+      definition: "intentionally listen or give attention",
     },
     {
       name: "curious",
-      defenition: "interested in something",
+      definition: "interested in something",
     },
     {
       name: "ashamed",
-      defenition: "feeling embarrassed",
+      definition: "feeling embarrassed",
     },
   ];
 
@@ -110,17 +110,17 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
-  function displayDefenition(vocabulary) {
+  function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
     definitionList.forEach((word) => {
-      vocaText += `<li>${word.defenition}</li>`;
+      vocaText += `<li>${word.definition}</li>`;
     });
     vocaText += "</ol>";
-    document.getElementById("defenition").innerHTML = vocaText;
+    document.getElementById("definition").innerHTML = vocaText;
   }
   const randomVocabulary = randomWords(vocabulary);
-  displayDefenition(randomVocabulary);
+  displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
   $("#check").on("click", function () {
     var source = 0;
@@ -132,8 +132,8 @@ $(function () {
       const indexFromVocabulary = userAnswer.charCodeAt(0) - "a".charCodeAt(0);
       console.log(indexFromVocabulary);
       console.log(definitionList[indexFromVocabulary]);
-      const defenition = definitionList[indexFromVocabulary].name;
-      if (vocabularyList[index].name == defenition) {
+      const definition = definitionList[indexFromVocabulary].name;
+      if (vocabularyList[index].name == definition) {
         source++;
       } else {
         incorrectVocabulary.push(vocabularyList[index].name);
@@ -143,7 +143,7 @@ $(function () {
     $("#message span").html(`You are correct ${source}/10. `);
     if (source < 10) {
       $("#message span").append(
-        `You should learn the defenition of: <strong>${errorString}</strong> again.`
+        `You should learn the definition of: <strong>${errorString}</strong> again.`
       );
     } else {
       $("#message span").append(

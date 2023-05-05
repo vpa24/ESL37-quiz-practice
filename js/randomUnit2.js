@@ -5,85 +5,85 @@ $(function () {
   var vocabulary = [
     {
       name: "worship",
-      defenition:
+      definition:
         "the pratice of showing respect for God or a god, by saying preyers, singing with others, etc.; a ceremony for this",
     },
     {
       name: "victory",
-      defenition: "succes in a game, an election, a war, etc.",
+      definition: "succes in a game, an election, a war, etc.",
     },
     {
       name: "tradional",
-      defenition:
+      definition:
         "a beflief, custom, or way of doing something that has existed for a long time",
     },
     {
       name: "lentils",
-      defenition: "a type of bean",
+      definition: "a type of bean",
     },
     {
       name: "embarrassed",
-      defenition: "feeling ashamed and uncomfotable",
+      definition: "feeling ashamed and uncomfotable",
     },
     {
       name: "bonfire",
-      defenition: "a large outdoor fire",
+      definition: "a large outdoor fire",
     },
     {
       name: "celebrate",
-      defenition: "to do something special for an important event",
+      definition: "to do something special for an important event",
     },
     {
       name: "unique",
-      defenition: "being the only one of its kind",
+      definition: "being the only one of its kind",
     },
     {
       name: "represnet",
-      defenition: "to stand for -- or in place of  -- something else",
+      definition: "to stand for -- or in place of  -- something else",
     },
     {
       name: "national",
-      defenition:
+      definition:
         "connected with a particular nation; shared by a whole nation",
     },
     {
       name: "common",
-      defenition:
+      definition:
         "happening offen; existing in large numbers or in many places",
     },
     {
       name: "lure",
-      defenition: "to trick or attract with the promise of something good",
+      definition: "to trick or attract with the promise of something good",
     },
     {
       name: "additional",
-      defenition: "more than was first mentioned or is usual",
+      definition: "more than was first mentioned or is usual",
     },
     {
       name: "decorations",
-      defenition:
+      definition:
         "a thing that make something look more attractive on special occasions",
     },
     {
       name: "chant",
-      defenition:
+      definition:
         "words or chrases that a group of people shout or sing again and again",
     },
     {
       name: "restrictions",
-      defenition: "a rule or law that limits or controls what people can do",
+      definition: "a rule or law that limits or controls what people can do",
     },
     {
       name: "everyday",
-      defenition: "used or happening every day or regularly; ordinary",
+      definition: "used or happening every day or regularly; ordinary",
     },
     {
       name: "island",
-      defenition: "a piece of land that is completely surround by water",
+      definition: "a piece of land that is completely surround by water",
     },
     {
       name: "ritual",
-      defenition:
+      definition:
         "a ceremony; something that is done in the same way every time",
     },
   ];
@@ -113,17 +113,17 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
-  function displayDefenition(vocabulary) {
+  function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
     definitionList.forEach((word) => {
-      vocaText += `<li>${word.defenition}</li>`;
+      vocaText += `<li>${word.definition}</li>`;
     });
     vocaText += "</ol>";
-    document.getElementById("defenition").innerHTML = vocaText;
+    document.getElementById("definition").innerHTML = vocaText;
   }
   const randomVocabulary = randomWords(vocabulary);
-  displayDefenition(randomVocabulary);
+  displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
   $("#check").on("click", function () {
     var source = 0;
@@ -135,8 +135,8 @@ $(function () {
       const indexFromVocabulary = userAnswer.charCodeAt(0) - "a".charCodeAt(0);
       console.log(indexFromVocabulary);
       console.log(definitionList[indexFromVocabulary]);
-      const defenition = definitionList[indexFromVocabulary].name;
-      if (vocabularyList[index].name == defenition) {
+      const definition = definitionList[indexFromVocabulary].name;
+      if (vocabularyList[index].name == definition) {
         source++;
       } else {
         incorrectVocabulary.push(vocabularyList[index].name);
@@ -146,7 +146,7 @@ $(function () {
     $("#message span").html(`You are correct ${source}/10. `);
     if (source < 10) {
       $("#message span").append(
-        `You should learn the defenition of: <strong>${errorString}</strong> again.`
+        `You should learn the definition of: <strong>${errorString}</strong> again.`
       );
     } else {
       $("#message span").append(

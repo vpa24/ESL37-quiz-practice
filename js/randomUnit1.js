@@ -5,80 +5,80 @@ $(function () {
   var vocabulary = [
     {
       name: "coach",
-      defenition:
+      definition:
         "to teach people to improve at a sport, skill, or school subject",
     },
     {
       name: "driveway",
-      defenition: "a private road leading up to a house",
+      definition: "a private road leading up to a house",
     },
     {
       name: "fine",
-      defenition: "good, acceptable, or satisfactory",
+      definition: "good, acceptable, or satisfactory",
     },
     {
       name: "ground",
-      defenition: "the surface of the earth",
+      definition: "the surface of the earth",
     },
     {
       name: "shovel",
-      defenition: "a tool used for digging (noun); to dig with a shovel (verb)",
+      definition: "a tool used for digging (noun); to dig with a shovel (verb)",
     },
     {
       name: "sidewalk",
-      defenition:
+      definition:
         "a usually concrete path along the side of a street of people to walk",
     },
     {
       name: "stuck",
-      defenition: "unable to move",
+      definition: "unable to move",
     },
     {
       name: "teen",
-      defenition: "short for teenager, someone between 13 and 19",
+      definition: "short for teenager, someone between 13 and 19",
     },
     {
       name: "community",
-      defenition: "all the different populations that live together in an area",
+      definition: "all the different populations that live together in an area",
     },
     {
       name: "organization",
-      defenition:
+      definition:
         "a company, business, club, etc. that is formed for a particular purpose",
     },
     {
       name: "common",
-      defenition:
+      definition:
         "happening offen; existing in large numbers or in many places",
     },
     {
       name: "experience",
-      defenition: "process of getting knowledge or skill",
+      definition: "process of getting knowledge or skill",
     },
     {
       name: "aboard",
-      defenition: "in or  to a foreign country",
+      definition: "in or  to a foreign country",
     },
     {
       name: "lifestyle",
-      defenition:
+      definition:
         "a specific way of living; the way as person lives or a group of people live",
     },
     {
       name: "valuable",
-      defenition: "worth a lot of money; useful or important",
+      definition: "worth a lot of money; useful or important",
     },
     {
       name: "afflunent",
-      defenition: "having a lot of money and good standard of living",
+      definition: "having a lot of money and good standard of living",
     },
     {
       name: "give up",
-      defenition: "to stop doing or having something",
+      definition: "to stop doing or having something",
     },
     {
       name: "satisfied",
-      defenition:
+      definition:
         "having a happy or pleased feeling because of something that you did or something that happened to you",
     },
   ];
@@ -108,17 +108,17 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
-  function displayDefenition(vocabulary) {
+  function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
     definitionList.forEach((word) => {
-      vocaText += `<li>${word.defenition}</li>`;
+      vocaText += `<li>${word.definition}</li>`;
     });
     vocaText += "</ol>";
-    document.getElementById("defenition").innerHTML = vocaText;
+    document.getElementById("definition").innerHTML = vocaText;
   }
   const randomVocabulary = randomWords(vocabulary);
-  displayDefenition(randomVocabulary);
+  displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
   $("#check").on("click", function () {
     var source = 0;
@@ -130,8 +130,8 @@ $(function () {
       const indexFromVocabulary = userAnswer.charCodeAt(0) - "a".charCodeAt(0);
       console.log(indexFromVocabulary);
       console.log(definitionList[indexFromVocabulary]);
-      const defenition = definitionList[indexFromVocabulary].name;
-      if (vocabularyList[index].name == defenition) {
+      const definition = definitionList[indexFromVocabulary].name;
+      if (vocabularyList[index].name == definition) {
         source++;
       } else {
         incorrectVocabulary.push(vocabularyList[index].name);
@@ -141,7 +141,7 @@ $(function () {
     $("#message span").html(`You are correct ${source}/10. `);
     if (source < 10) {
       $("#message span").append(
-        `You should learn the defenition of: <strong>${errorString}</strong> again.`
+        `You should learn the definition of: <strong>${errorString}</strong> again.`
       );
     } else {
       $("#message span").append(

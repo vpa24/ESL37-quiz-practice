@@ -5,83 +5,83 @@ $(function () {
   var vocabulary = [
     {
       name: "especially",
-      defenition: "to a great extent; very muc",
+      definition: "to a great extent; very muc",
     },
     {
       name: "distracted",
-      defenition: "unable to concentrate",
+      definition: "unable to concentrate",
     },
     {
       name: "consume",
-      defenition: "to use (fuel, time, rescources)",
+      definition: "to use (fuel, time, rescources)",
     },
     {
       name: "technique",
-      defenition: "way of accomplishing something",
+      definition: "way of accomplishing something",
     },
     {
       name: "productivity",
-      defenition: "the quality of being able to generate",
+      definition: "the quality of being able to generate",
     },
     {
       name: "concentrate",
-      defenition: "put in effort on a particular object",
+      definition: "put in effort on a particular object",
     },
     {
       name: "familiar",
-      defenition: "easily to recoginzed",
+      definition: "easily to recoginzed",
     },
     {
       name: "minimize",
-      defenition: "keep to a minimmun",
+      definition: "keep to a minimmun",
     },
     {
       name: "interval",
-      defenition: "a space between time period",
+      definition: "a space between time period",
     },
     {
       name: "leisure",
-      defenition: "freetime",
+      definition: "freetime",
     },
     {
       name: "blossom",
-      defenition: "to change, grow and develop fully",
+      definition: "to change, grow and develop fully",
     },
     {
       name: "track",
-      defenition: "to record the progress",
+      definition: "to record the progress",
     },
     {
       name: "sync",
-      defenition: "working together at the same time",
+      definition: "working together at the same time",
     },
     {
       name: "sophisticated",
-      defenition: "complex/complicated",
+      definition: "complex/complicated",
     },
     {
       name: "marks",
-      defenition: "symbols used for indentification",
+      definition: "symbols used for indentification",
     },
     {
       name: "mark",
-      defenition: "to record something",
+      definition: "to record something",
     },
     {
       name: "monument",
-      defenition: "a building that is build to honor a special person or event",
+      definition: "a building that is build to honor a special person or event",
     },
     {
       name: "society",
-      defenition: "a large group of people who live together",
+      definition: "a large group of people who live together",
     },
     {
       name: "accurate",
-      defenition: "correct/without any mistakes",
+      definition: "correct/without any mistakes",
     },
     {
       name: "messure",
-      defenition: "discover the exact size or amount",
+      definition: "discover the exact size or amount",
     },
   ];
 
@@ -110,17 +110,17 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
-  function displayDefenition(vocabulary) {
+  function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
     definitionList.forEach((word) => {
-      vocaText += `<li>${word.defenition}</li>`;
+      vocaText += `<li>${word.definition}</li>`;
     });
     vocaText += "</ol>";
-    document.getElementById("defenition").innerHTML = vocaText;
+    document.getElementById("definition").innerHTML = vocaText;
   }
   const randomVocabulary = randomWords(vocabulary);
-  displayDefenition(randomVocabulary);
+  displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
   $("#check").on("click", function () {
     var source = 0;
@@ -132,8 +132,8 @@ $(function () {
       const indexFromVocabulary = userAnswer.charCodeAt(0) - "a".charCodeAt(0);
       console.log(indexFromVocabulary);
       console.log(definitionList[indexFromVocabulary]);
-      const defenition = definitionList[indexFromVocabulary].name;
-      if (vocabularyList[index].name == defenition) {
+      const definition = definitionList[indexFromVocabulary].name;
+      if (vocabularyList[index].name == definition) {
         source++;
       } else {
         incorrectVocabulary.push(vocabularyList[index].name);
@@ -143,7 +143,7 @@ $(function () {
     $("#message span").html(`You are correct ${source}/10. `);
     if (source < 10) {
       $("#message span").append(
-        `You should learn the defenition of: <strong>${errorString}</strong> again.`
+        `You should learn the definition of: <strong>${errorString}</strong> again.`
       );
     } else {
       $("#message span").append(
