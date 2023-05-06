@@ -135,19 +135,36 @@ $(function () {
     var source = 0;
     var incorrectVocabulary = [];
     $("input.answer").each(function (index) {
-      console.log(vocabularyList[index].name);
       var userAnswer = $(this).val();
-      // Convert the user input to an index
-      const indexFromVocabulary = userAnswer.charCodeAt(0) - "a".charCodeAt(0);
-      console.log(indexFromVocabulary);
-      console.log(definitionList[indexFromVocabulary]);
-      const definition = definitionList[indexFromVocabulary].name;
-      if (vocabularyList[index].name == definition) {
-        source++;
+      if (userAnswer == "") {
+        $(`#answer_${index + 1}`).trigger("focus");
+        $("#message span").html(
+          `Please find the answer of <b>${vocabularyList[index].name}</b>`
+        );
+
+        $("#message").addClass("alert-warning");
+        $("#message").removeClass("d-none");
+        breakOnClick = true;
+        return false;
       } else {
-        incorrectVocabulary.push(vocabularyList[index].name);
+        // Convert the user input to an index
+        if ($("#message").hasClass("alert-warning")) {
+          breakOnClick = false;
+          $("#message").removeClass("alert-warning");
+        }
+        const indexFromVocabulary =
+          userAnswer.charCodeAt(0) - "a".charCodeAt(0);
+        const definition = definitionList[indexFromVocabulary].name;
+        if (vocabularyList[index].name == definition) {
+          source++;
+        } else {
+          incorrectVocabulary.push(vocabularyList[index].name);
+        }
       }
     });
+    if (breakOnClick) {
+      return false;
+    }
     var errorString = incorrectVocabulary.join(", ");
     $("#message span").html(`You are correct ${source}/10. `);
     if (source < 10) {
