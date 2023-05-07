@@ -135,22 +135,17 @@ $(function () {
   $("#check").on("click", function () {
     var source = 0;
     var incorrectVocabulary = [];
+    var emptyAnswer = [];
     $("input.answer").each(function (index) {
+      var vocaName = vocabularyList[index].name;
       var userAnswer = $(this).val();
       if (userAnswer == "") {
         $(`#answer_${index + 1}`).trigger("focus");
-        $("#message").html(
-          `Please find the answer of <b>${vocabularyList[index].name}</b>`
-        );
-
+        emptyAnswer.push(vocaName);
         $("#message").addClass("alert-warning");
         $("#message").removeClass("d-none");
-        breakOnClick = true;
-        return false;
       } else {
-        // Convert the user input to an index
         if ($("#message").hasClass("alert-warning")) {
-          breakOnClick = false;
           $("#message").removeClass("alert-warning");
         }
         const indexFromVocabulary =
@@ -159,15 +154,16 @@ $(function () {
         if (vocabularyList[index].name == definition) {
           source++;
         } else {
-          var vocaName = vocabularyList[index].name;
           incorrectVocabulary.push(vocaName);
           $(`#answer_${index + 1}`).val(getLetter(vocaName));
           $(`#answer_${index + 1}`).addClass("text-danger fw-bold");
         }
       }
     });
-    if (breakOnClick) {
-      return false;
+    if (emptyAnswer.length > 1) {
+      var emptyAnswerString = emptyAnswer.join(", ");
+      $("#message").html(`Please find the answer of <b>${emptyAnswerString}</b>`);
+      return;
     }
     var errorString = incorrectVocabulary.join(", ");
     if (source < 10) {
