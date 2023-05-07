@@ -1,6 +1,7 @@
 $(function () {
   var vocabularyList = [];
   var definitionList = [];
+  var breakOnClick = false;
 
   var vocabulary = [
     {
@@ -157,14 +158,13 @@ $(function () {
       return false;
     }
     var errorString = incorrectVocabulary.join(", ");
-    $("#message span").html(`You are correct ${source}/10. `);
     if (source < 10) {
-      $("#message span").append(
-        `You should learn the definition of: <strong>${errorString}</strong> again.`
+      $("#message span").html(
+        `You are correct ${source}/10. You should learn the definition of: <strong>${errorString}</strong> again.`
       );
     } else {
       $("#message span").append(
-        `<span'>&#128516;</span> Wow. You are so awesome!`
+        `Great job! You got a perfect 10 out of 10! That's fantastic! You're amazing!! 🎉👍`
       );
     }
     $("#message").removeClass("d-none");
