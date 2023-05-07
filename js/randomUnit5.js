@@ -129,6 +129,18 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("definition").innerHTML = vocaText;
   }
+
+  function getLetter(word) {
+    var definition = "";
+    $.each(definitionList, function (index, item) {
+      if (item.name === word) {
+        definition = index + 1;
+        return false;
+      }
+    });
+    return String.fromCharCode(definition + 96);
+  }
+
   const randomVocabulary = randomWords(vocabulary);
   displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
@@ -159,7 +171,10 @@ $(function () {
         if (vocabularyList[index].name == definition) {
           source++;
         } else {
-          incorrectVocabulary.push(vocabularyList[index].name);
+          var vocaName = vocabularyList[index].name;
+          incorrectVocabulary.push(vocaName);
+          $(`#answer_${index + 1}`).val(getLetter(vocaName));
+          $(`#answer_${index + 1}`).addClass("text-danger fw-bold");
         }
       }
     });
@@ -175,8 +190,8 @@ $(function () {
       $("#message span").append(
         `Great job! You got a perfect 10 out of 10! That's fantastic! You're amazing!! 🎉👍`
       );
+      $("input[type=text]").val("");
     }
     $("#message").removeClass("d-none");
-    $("input[type=text]").val("");
   });
 });
