@@ -178,7 +178,7 @@ $(function () {
     var errorString = incorrectVocabulary.join(", ");
     if (source < 10) {
       $("#message span").html(
-        `You are correct ${source}/10. You should learn the definition of: <strong>${errorString}</strong> again.`
+        `You are correct ${source}/10. You should learn the definition of <strong>${errorString}</strong> again.`
       );
     } else {
       $("#message span").append(
