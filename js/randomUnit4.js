@@ -141,7 +141,7 @@ $(function () {
       var userAnswer = $(this).val();
       if (userAnswer == "") {
         $(`#answer_${index + 1}`).trigger("focus");
-        $("#message span").html(
+        $("#message").html(
           `Please find the answer of <b>${vocabularyList[index].name}</b>`
         );
 
@@ -173,14 +173,24 @@ $(function () {
     }
     var errorString = incorrectVocabulary.join(", ");
     if (source < 10) {
-      $("#message span").html(
+      $("#message ").html(
         `You are correct ${source}/10. You should learn the definition of <strong>${errorString}</strong> again.`
       );
     } else {
-      $("#message span").html(
+      $("#message").html(
         `Great job! You got a perfect 10 out of 10! You're amazing!! 🎉👍`
       );
     }
+    $(this).addClass("d-none");
     $("#message").removeClass("d-none");
+    $("#new").removeClass("d-none");
+  });
+
+  $("#new").on("click", function () {
+    displaydefinition(randomVocabulary);
+    displayVocabulary(randomVocabulary);
+    $(this).addClass("d-none");
+    $("#message").addClass("d-none");
+    $("#check").removeClass("d-none");
   });
 });
