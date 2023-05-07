@@ -190,7 +190,6 @@ $(function () {
       $("#message span").append(
         `Great job! You got a perfect 10 out of 10! That's fantastic! You're amazing!! 🎉👍`
       );
-      $("input[type=text]").val("");
     }
     $("#message").removeClass("d-none");
   });
