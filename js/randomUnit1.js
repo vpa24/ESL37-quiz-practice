@@ -108,6 +108,7 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
+  
   function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
@@ -129,6 +130,15 @@ $(function () {
     return String.fromCharCode(definition + 96);
   }
 
+  function processEmptyAnswer(emptyAnswer) {
+    var names = emptyAnswer.map((word) => word.name);
+    var emptyAnswerString = names.join(", ");
+    $(`#answer_${emptyAnswer[0].index + 1}`).trigger("focus");
+    $("#message").addClass("alert-warning");
+    $("#message").removeClass("d-none");
+    $("#message").html(`Please find the answer of <b>${emptyAnswerString}</b>`);
+  }
+
   const randomVocabulary = randomWords(vocabulary);
   displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
@@ -140,44 +150,43 @@ $(function () {
       var vocaName = vocabularyList[index].name;
       var userAnswer = $(this).val();
       if (userAnswer == "") {
-        $(`#answer_${index + 1}`).trigger("focus");
-        emptyAnswer.push(vocaName);
-        $("#message").addClass("alert-warning");
-        $("#message").removeClass("d-none");
+        emptyAnswer.push({ name: vocaName, index: index });
       } else {
-        if ($("#message").hasClass("alert-warning")) {
-          $("#message").removeClass("alert-warning");
-        }
         const indexFromVocabulary =
           userAnswer.charCodeAt(0) - "a".charCodeAt(0);
         const definition = definitionList[indexFromVocabulary].name;
-        if (vocabularyList[index].name == definition) {
+        if (vocaName == definition) {
           source++;
         } else {
-          incorrectVocabulary.push(vocaName);
-          $(`#answer_${index + 1}`).val(getLetter(vocaName));
-          $(`#answer_${index + 1}`).addClass("text-danger fw-bold");
+          incorrectVocabulary.push({ name: vocaName, index: index });
         }
       }
     });
     if (emptyAnswer.length > 1) {
-      var emptyAnswerString = emptyAnswer.join(", ");
-      $("#message").html(`Please find the answer of <b>${emptyAnswerString}</b>`);
-      return;
-    }
-    var errorString = incorrectVocabulary.join(", ");
-    if (source < 10) {
-      $("#message ").html(
-        `You are correct ${source}/10. You should learn the definition of <strong>${errorString}</strong> again.`
-      );
+      processEmptyAnswer(emptyAnswer);
     } else {
-      $("#message").html(
-        `Great job! You got a perfect 10 out of 10! You're amazing!! 🎉👍`
-      );
+      incorrectVocabulary.map((word) => {
+        $(`#answer_${word.index + 1}`).val(getLetter(word.name));
+        $(`#answer_${word.index + 1}`).addClass("text-danger fw-bold");
+      });
+      var names = incorrectVocabulary.map((word) => word.name);
+      var errorString = names.join(", ");
+      if ($("#message").hasClass("alert-warning")) {
+        $("#message").removeClass("alert-warning");
+      }
+      if (source < 10) {
+        $("#message ").html(
+          `You are correct ${source}/10. You should learn the definition of <strong>${errorString}</strong> again.`
+        );
+      } else {
+        $("#message").html(
+          `Great job! You got a perfect 10 out of 10! You're amazing!! 🎉👍`
+        );
+      }
+      $(this).addClass("d-none");
+      $("#message").removeClass("d-none");
+      $("#new").removeClass("d-none");
     }
-    $(this).addClass("d-none");
-    $("#message").removeClass("d-none");
-    $("#new").removeClass("d-none");
   });
 
   $("#new").on("click", function () {
