@@ -175,8 +175,8 @@ $(function () {
         `You are correct ${source}/10. You should learn the definition of <strong>${errorString}</strong> again.`
       );
     } else {
-      $("#message span").append(
-        `Great job! You got a perfect 10 out of 10! That's fantastic! You're amazing!! 🎉👍`
+      $("#message span").html(
+        `Great job! You got a perfect 10 out of 10! You're amazing!! 🎉👍`
       );
     }
     $("#message").removeClass("d-none");
