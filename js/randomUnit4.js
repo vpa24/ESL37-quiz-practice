@@ -36,7 +36,7 @@ $(function () {
       definition: "correct/without any mistakes",
     },
     {
-      name: "messure",
+      name: "measure",
       definition: "discover the exact size or amount",
     },
   ];
