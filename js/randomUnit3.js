@@ -12,7 +12,7 @@ $(function () {
       definition: "happen immediately",
     },
     {
-      name: "toodler",
+      name: "toddler",
       definition: "a young child learning to walk",
     },
     {
