@@ -4,11 +4,6 @@ $(function () {
 
   var vocabulary = [
     {
-      name: "worship",
-      definition:
-        "the pratice of showing respect for God or a god, by saying preyers, singing with others, etc.; a ceremony for this",
-    },
-    {
       name: "victory",
       definition: "succes in a game, an election, a war, etc.",
     },
@@ -18,24 +13,12 @@ $(function () {
         "a beflief, custom, or way of doing something that has existed for a long time",
     },
     {
-      name: "lentils",
-      definition: "a type of bean",
-    },
-    {
       name: "embarrassed",
       definition: "feeling ashamed and uncomfotable",
     },
     {
-      name: "bonfire",
-      definition: "a large outdoor fire",
-    },
-    {
       name: "celebrate",
       definition: "to do something special for an important event",
-    },
-    {
-      name: "unique",
-      definition: "being the only one of its kind",
     },
     {
       name: "represnet",
@@ -52,34 +35,13 @@ $(function () {
         "happening offen; existing in large numbers or in many places",
     },
     {
-      name: "lure",
-      definition: "to trick or attract with the promise of something good",
-    },
-    {
       name: "additional",
       definition: "more than was first mentioned or is usual",
     },
     {
-      name: "decorations",
+      name: "decoration",
       definition:
         "a thing that make something look more attractive on special occasions",
-    },
-    {
-      name: "chant",
-      definition:
-        "words or chrases that a group of people shout or sing again and again",
-    },
-    {
-      name: "restrictions",
-      definition: "a rule or law that limits or controls what people can do",
-    },
-    {
-      name: "everyday",
-      definition: "used or happening every day or regularly; ordinary",
-    },
-    {
-      name: "island",
-      definition: "a piece of land that is completely surround by water",
     },
     {
       name: "ritual",

@@ -21,49 +21,12 @@ $(function () {
       definition: "without any delay",
     },
     {
-      name: "round",
-      definition: "a series of similar actions, events, activities, or things",
-    },
-    {
-      name: "fan",
-      definition:
-        "a person who likes and admires someone or something in a very enthusiastic way",
-    },
-    {
-      name: "disgusting",
-      definition:
-        "so unpleasant to see, smell, taste, consider, etc.., that you feel slightly sick",
-    },
-    {
-      name: "ton",
-      definition:
-        "a unit for measuring weight that equals 2,000 pounds (907 kilograms)",
-    },
-    {
-      name: "layer",
-      definition:
-        "a form or arrange parts or pieces of something on top of each other",
-    },
-    {
-      name: "tourist",
-      definition: "of or relating to a tour, tourism, or tourist",
-    },
-    {
       name: "distant",
       definition: "existing or happening far away in space: separated by space",
     },
     {
-      name: "container",
-      definition:
-        "a large box that goods are placed in so that they can be moved from one place to another; an object that can hold something",
-    },
-    {
       name: "mobile",
       definition: "able to move from one place to another",
-    },
-    {
-      name: "community (adj)",
-      definition: "belonging or relating to a community as a whole",
     },
     {
       name: "community (n)",
@@ -71,29 +34,14 @@ $(function () {
         "a group of people who are live in the same area; a group of people who have the same interests, religion, race, etc.",
     },
     {
-      name: "founder",
-      definition:
-        "a person who creates or establishes something that is meant for a long time (such as a business or school)",
-    },
-    {
       name: "success",
       definition: "the fact of getting or achieving wealth, respect, or fame",
-    },
-    {
-      name: "treasure",
-      definition: "relating to something that is every important or valuable",
-    },
-    {
-      name: "design",
-      definition:
-        "the way something has been made: the way the parts of something are formed and arranged for a specific use, effect, etc.",
     },
     {
       name: "narrow",
       definition: "long and not wide: small from one side to the other side",
     },
   ];
-
   function randomWords(words) {
     const shuffledWords = [...words]; // Make a copy of the input array
     for (let i = shuffledWords.length - 1; i > 0; i--) {

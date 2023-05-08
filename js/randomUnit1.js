@@ -3,60 +3,17 @@ $(function () {
   var definitionList = [];
   var vocabulary = [
     {
-      name: "coach",
-      definition:
-        "to teach people to improve at a sport, skill, or school subject",
-    },
-    {
       name: "driveway",
       definition: "a private road leading up to a house",
-    },
-    {
-      name: "fine",
-      definition: "good, acceptable, or satisfactory",
-    },
-    {
-      name: "ground",
-      definition: "the surface of the earth",
-    },
-    {
-      name: "shovel",
-      definition: "a tool used for digging (noun); to dig with a shovel (verb)",
-    },
-    {
-      name: "sidewalk",
-      definition:
-        "a usually concrete path along the side of a street of people to walk",
     },
     {
       name: "stuck",
       definition: "unable to move",
     },
     {
-      name: "teen",
-      definition: "short for teenager, someone between 13 and 19",
-    },
-    {
-      name: "community",
-      definition: "all the different populations that live together in an area",
-    },
-    {
       name: "organization",
       definition:
         "a company, business, club, etc. that is formed for a particular purpose",
-    },
-    {
-      name: "common",
-      definition:
-        "happening offen; existing in large numbers or in many places",
-    },
-    {
-      name: "experience",
-      definition: "process of getting knowledge or skill",
-    },
-    {
-      name: "aboard",
-      definition: "in or  to a foreign country",
     },
     {
       name: "lifestyle",
@@ -74,11 +31,6 @@ $(function () {
     {
       name: "give up",
       definition: "to stop doing or having something",
-    },
-    {
-      name: "satisfied",
-      definition:
-        "having a happy or pleased feeling because of something that you did or something that happened to you",
     },
   ];
 

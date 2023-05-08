@@ -20,60 +20,16 @@ $(function () {
       definition: "way of accomplishing something",
     },
     {
-      name: "productivity",
-      definition: "the quality of being able to generate",
-    },
-    {
-      name: "concentrate",
-      definition: "put in effort on a particular object",
-    },
-    {
       name: "familiar",
       definition: "easily to recoginzed",
-    },
-    {
-      name: "minimize",
-      definition: "keep to a minimmun",
-    },
-    {
-      name: "interval",
-      definition: "a space between time period",
-    },
-    {
-      name: "leisure",
-      definition: "freetime",
-    },
-    {
-      name: "blossom",
-      definition: "to change, grow and develop fully",
-    },
-    {
-      name: "track",
-      definition: "to record the progress",
-    },
-    {
-      name: "sync",
-      definition: "working together at the same time",
     },
     {
       name: "sophisticated",
       definition: "complex/complicated",
     },
     {
-      name: "marks",
-      definition: "symbols used for indentification",
-    },
-    {
-      name: "mark",
-      definition: "to record something",
-    },
-    {
       name: "monument",
       definition: "a building that is build to honor a special person or event",
-    },
-    {
-      name: "society",
-      definition: "a large group of people who live together",
     },
     {
       name: "accurate",

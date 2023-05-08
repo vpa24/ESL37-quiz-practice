@@ -8,16 +8,8 @@ $(function () {
       definition: "look for a long time with the eyes wide open",
     },
     {
-      name: "in public",
-      definition: "in the place where many people can hear it such as a park",
-    },
-    {
       name: "instant",
       definition: "happen immediately",
-    },
-    {
-      name: "bond",
-      definition: "strong feeling of friendship",
     },
     {
       name: "toodler",
@@ -28,20 +20,8 @@ $(function () {
       definition: "relating to the body",
     },
     {
-      name: "reaction",
-      definition: "way to react to something",
-    },
-    {
-      name: "relate to",
-      definition: "connected something or someone",
-    },
-    {
       name: "difference",
       definition: "things that are not the same",
-    },
-    {
-      name: "different",
-      definition: "not the same",
     },
     {
       name: "material",
@@ -52,24 +32,8 @@ $(function () {
       definition: "to express disapproval of someone or something",
     },
     {
-      name: "discouraged",
-      definition: "lacking of confidence",
-    },
-    {
-      name: "sounds",
-      definition: "something you can hear",
-    },
-    {
-      name: "planet",
-      definition: "the earth",
-    },
-    {
       name: "patience",
       definition: "the ability without complaint",
-    },
-    {
-      name: "overnight",
-      definition: "during overnight",
     },
     {
       name: "ingore",
@@ -78,10 +42,6 @@ $(function () {
     {
       name: "curious",
       definition: "interested in something",
-    },
-    {
-      name: "ashamed",
-      definition: "feeling embarrassed",
     },
   ];
 
