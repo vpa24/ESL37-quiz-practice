@@ -1,7 +1,6 @@
 $(function () {
   var vocabularyList = [];
   var definitionList = [];
-  var breakOnClick = false;
 
   var vocabulary = [
     {
@@ -120,7 +119,7 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
-  
+
   function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
