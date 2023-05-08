@@ -21,7 +21,7 @@ $(function () {
       definition: "to do something special for an important event",
     },
     {
-      name: "represnet",
+      name: "represent",
       definition: "to stand for -- or in place of  -- something else",
     },
     {
