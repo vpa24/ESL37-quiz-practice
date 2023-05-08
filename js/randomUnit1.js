@@ -149,7 +149,7 @@ $(function () {
     var emptyAnswer = [];
     $("input.answer").each(function (index) {
       var vocaName = vocabularyList[index].name;
-      var userAnswer = $(this).val();
+      var userAnswer = $(this).val().toLowerCase();
       if (userAnswer == "") {
         emptyAnswer.push({ name: vocaName, index: index });
       } else {
