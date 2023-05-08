@@ -25,7 +25,7 @@ $(function () {
       definition: "worth a lot of money; useful or important",
     },
     {
-      name: "afflunent",
+      name: "affluent",
       definition: "having a lot of money and good standard of living",
     },
     {
