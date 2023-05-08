@@ -137,7 +137,9 @@ $(function () {
     $(`#answer_${emptyAnswer[0].index + 1}`).trigger("focus");
     $("#message").addClass("alert-warning");
     $("#message").removeClass("d-none");
-    $("#message").html(`Please find the answer of <b>${emptyAnswerString}</b>`);
+    $("#message").html(
+      `Please find the answer of <b>${emptyAnswerString}</b>.`
+    );
   }
 
   const randomVocabulary = randomWords(vocabulary);

@@ -110,7 +110,7 @@ $(function () {
     vocaText += "</ol>";
     document.getElementById("vocabulary").innerHTML = vocaText;
   }
-  
+
   function displaydefinition(vocabulary) {
     definitionList = randomWords(vocabulary).slice(0, 10);
     let vocaText = "<ol type='a'>";
@@ -138,7 +138,9 @@ $(function () {
     $(`#answer_${emptyAnswer[0].index + 1}`).trigger("focus");
     $("#message").addClass("alert-warning");
     $("#message").removeClass("d-none");
-    $("#message").html(`Please find the answer of <b>${emptyAnswerString}</b>`);
+    $("#message").html(
+      `Please find the answer of <b>${emptyAnswerString}</b>.`
+    );
   }
 
   const randomVocabulary = randomWords(vocabulary);

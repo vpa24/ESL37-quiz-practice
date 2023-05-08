@@ -428,7 +428,7 @@ $(function () {
     vocabularyList.forEach((word, index) => {
       vocaText += `<li>${
         word.name
-      } <input  type="text"  maxlength="1" size="2" id="answer_${
+      } <input  type="text"  maxlength="1" size="2" class="answer" id="answer_${
         index + 1
       }" /></li>`;
     });
@@ -463,7 +463,9 @@ $(function () {
     $(`#answer_${emptyAnswer[0].index + 1}`).trigger("focus");
     $("#message").addClass("alert-warning");
     $("#message").removeClass("d-none");
-    $("#message").html(`Please find the answer of <b>${emptyAnswerString}</b>`);
+    $("#message").html(
+      `Please find the answer of <b>${emptyAnswerString}</b>.`
+    );
   }
 
   const randomVocabulary = randomWords(vocabulary);
