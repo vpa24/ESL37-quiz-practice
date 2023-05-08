@@ -8,7 +8,7 @@ $(function () {
       definition: "succes in a game, an election, a war, etc.",
     },
     {
-      name: "tradional",
+      name: "traditional",
       definition:
         "a beflief, custom, or way of doing something that has existed for a long time",
     },
