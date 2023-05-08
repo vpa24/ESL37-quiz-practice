@@ -65,7 +65,7 @@ $(function () {
       definition: "able to move from one place to another",
     },
     {
-      name: "community (n)",
+      name: "community",
       definition:
         "a group of people who are live in the same area; a group of people who have the same interests, religion, race, etc.",
     },
