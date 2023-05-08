@@ -36,7 +36,7 @@ $(function () {
       definition: "the ability without complaint",
     },
     {
-      name: "ingore",
+      name: "ignore",
       definition: "intentionally listen or give attention",
     },
     {
