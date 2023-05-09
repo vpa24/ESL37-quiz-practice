@@ -29,7 +29,7 @@ footer {
     padding-left: 1rem !important;
   }
   .border-end-0 {
-    border-right: 1px !important;
+    border-right: 1px solid #adb5bd !important;
   }
 }
 /* On small screens, set height to 'auto' for sidenav and grid */
