@@ -70,7 +70,61 @@
     </nav>
     <div class="container p-4">
       <h2 class="text-center text-info">Mixed Vocabulary</h2>
-      <div class="w-90 pb-4">
+      <div class="pb-4">
+        List each of the following vocabulary words by its part of speech.
+      </div>
+      <div
+        class="alert alert-success alert-dismissible fade show d-none"
+        role="alert"
+        id="message_part_1"
+      ></div>
+      <div id="part_1">
+        <div class="border border-dark-subtle px-4 py-2" id="list_1"></div>
+        <div class="row mt-2">
+          <div class="col border border-dark-subtle border-end-0">
+            <div class="border-bottom border-dark-subtle mb-1 fw-bold">
+              Nouns
+            </div>
+            <textarea
+              placeholder="You should add comma (,) after each word!"
+              rows="8"
+              id="nouns"
+            ></textarea>
+            <div id="nouns_anwser" class="d-none"></div>
+          </div>
+          <div class="col border border-dark-subtle border-end-0">
+            <div class="border-bottom border-dark-subtle mb-1 fw-bold">
+              Verbs
+            </div>
+            <textarea
+              placeholder="You should add comma (,) after each word!"
+              rows="8"
+              id="verbs"
+            ></textarea>
+            <div id="verbs_anwser" class="d-none"></div>
+          </div>
+          <div class="col border border-dark-subtle" id="adj">
+            <div class="border-bottom border-dark-subtle mb-1 fw-bold">
+              Adjectives
+            </div>
+            <textarea
+              placeholder="You should add comma (,) after each word!"
+              rows="8"
+              id="adjs"
+            ></textarea>
+            <div id="adjs_anwser" class="d-none"></div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center my-2">
+        <button type="button" class="btn btn-info mt-2" id="check_part_1">
+          Check!
+        </button>
+        <button type="button" class="btn btn-warning d-none" id="new_part_1">
+          Try a New Quiz
+        </button>
+      </div>
+      <div class="pb-4 mt-3">
         Match the vocabulary word with its definition/meaning
       </div>
       <div
@@ -78,7 +132,6 @@
         role="alert"
         id="message"
       >
-        <span></span>
         <button
           type="button"
           class="btn-close"
