@@ -5,195 +5,240 @@ $(function () {
   var vocabulary = [
     {
       name: "especially",
+      type: "adv",
       definition: "to a great extent; very much",
     },
     {
       name: "distracted",
+      type: "adj",
       definition: "unable to concentrate",
     },
     {
       name: "consume",
+      type: "v",
       definition: "to use (fuel, time, rescources)",
     },
     {
       name: "technique",
+      type: "n",
       definition: "way of accomplishing something",
     },
     {
       name: "familiar",
+      type: "adj",
       definition: "easily to recoginzed",
     },
     {
       name: "sophisticated",
+      type: "adj",
       definition: "complex/complicated",
     },
     {
       name: "monument",
+      type: "n",
       definition: "a building that is build to honor a special person or event",
     },
     {
       name: "accurate",
+      type: "adj",
       definition: "correct/without any mistakes",
     },
     {
-      name: "messure",
+      name: "measure",
+      type: "v",
       definition: "discover the exact size or amount",
     },
     {
       name: "countless",
+      type: "adj",
       definition: "too many to be counted: very many",
     },
     {
       name: "alley",
+      type: "n",
       definition: "a narrow street or passage between building",
     },
     {
       name: "audience",
+      type: "n",
       definition:
         "a group of people who gather together to listen to something or watch something",
     },
     {
       name: "immediately",
+      type: "adv",
       definition: "without any delay",
     },
     {
       name: "distant",
+      type: "adj",
       definition: "existing or happening far away in space: separated by space",
     },
     {
       name: "mobile",
+      type: "adj",
       definition: "able to move from one place to another",
     },
     {
       name: "community",
+      type: "n",
       definition:
         "a group of people who are live in the same area; a group of people who have the same interests, religion, race, etc.",
     },
     {
       name: "success",
+      type: "n",
       definition: "the fact of getting or achieving wealth, respect, or fame",
     },
     {
       name: "narrow",
+      type: "adj",
       definition: "long and not wide: small from one side to the other side",
     },
     {
       name: "stare",
+      type: "v",
       definition: "look for a long time with the eyes wide open",
     },
     {
       name: "instant",
+      type: "adj",
       definition: "happen immediately",
     },
     {
-      name: "toodler",
+      name: "toddler",
+      type: "n",
       definition: "a young child learning to walk",
     },
     {
       name: "physical",
+      type: "adj",
       definition: "relating to the body",
     },
     {
       name: "difference",
+      type: "n",
       definition: "things that are not the same",
     },
     {
       name: "material",
+      type: "n",
       definition: "a physical subtance that things can be made from",
     },
     {
       name: "criticize",
+      type: "v",
       definition: "to express disapproval of someone or something",
     },
     {
       name: "patience",
+      type: "n",
       definition: "the ability without complaint",
     },
     {
-      name: "ingore",
+      name: "ignore",
+      type: "v",
       definition: "intentionally listen or give attention",
     },
     {
       name: "curious",
+      type: "adj",
       definition: "interested in something",
     },
     {
       name: "driveway",
+      type: "n",
       definition: "a private road leading up to a house",
     },
     {
       name: "stuck",
+      type: "adj",
       definition: "unable to move",
     },
     {
       name: "organization",
+      type: "n",
       definition:
         "a company, business, club, etc. that is formed for a particular purpose",
     },
     {
       name: "lifestyle",
+      type: "n",
       definition:
         "a specific way of living; the way as person lives or a group of people live",
     },
     {
       name: "valuable",
+      type: "adj",
       definition: "worth a lot of money; useful or important",
     },
     {
-      name: "afflunent",
+      name: "affluent",
+      type: "adj",
       definition: "having a lot of money and good standard of living",
     },
     {
       name: "give up",
+      type: "phrasal verb",
       definition: "to stop doing or having something",
     },
     {
       name: "victory",
+      type: "n",
       definition: "succes in a game, an election, a war, etc.",
     },
     {
-      name: "tradional",
+      name: "traditional",
+      type: "adj",
       definition:
         "a beflief, custom, or way of doing something that has existed for a long time",
     },
     {
       name: "embarrassed",
+      type: "adj",
       definition: "feeling ashamed and uncomfotable",
     },
     {
       name: "celebrate",
+      type: "v",
       definition: "to do something special for an important event",
     },
     {
-      name: "represnet",
+      name: "represent",
+      type: "v",
       definition: "to stand for -- or in place of  -- something else",
     },
     {
       name: "national",
+      type: "adj",
       definition:
         "connected with a particular nation; shared by a whole nation",
     },
     {
       name: "common",
+      type: "adj",
       definition:
         "happening offen; existing in large numbers or in many places",
     },
     {
       name: "additional",
+      type: "adj",
       definition: "more than was first mentioned or is usual",
     },
     {
       name: "decoration",
+      type: "n",
       definition:
         "a thing that make something look more attractive on special occasions",
     },
     {
       name: "ritual",
+      type: "n",
       definition:
         "a ceremony; something that is done in the same way every time",
     },
   ];
-  console.log(vocabulary);
+  
   function randomWords(words) {
     const shuffledWords = [...words]; // Make a copy of the input array
     for (let i = shuffledWords.length - 1; i > 0; i--) {
