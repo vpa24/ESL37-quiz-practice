@@ -7,6 +7,13 @@ $(function () {
   var nounsList = [];
   var userAdjectivesList = [];
   var adjectivesList = [];
+  // Check if device is a mobile device
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+
+  // Add click event listener to scroll to top button if on mobile device
 
   var vocabulary = [
     {
@@ -524,4 +531,10 @@ $(function () {
     $("#message_part_1").addClass("d-none");
     $("#check_part_1, textarea").removeClass("d-none");
   });
+  if (isMobile) {
+    $("#check_part_1").on("click", function () {
+      $("html, body").animate({ scrollTop: 150 }, 500);
+      return false;
+    });
+  }
 });
