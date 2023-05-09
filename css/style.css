@@ -59,3 +59,26 @@ input[type="text"] {
 .list-group-item {
   text-decoration: underline;
 }
+#list_1 {
+  word-spacing: 12px;
+  line-height: 2.5;
+}
+#part_1 .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+#part_1 textarea {
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  resize: none;
+  padding: 12px 20px;
+  outline: none;
+  min-height: 200px;
+}
+#nouns_anwser,
+#verbs_anwser,
+#adj_annwer {
+  min-height: 200px;
+}
