@@ -31,6 +31,10 @@ footer {
   .border-end-0 {
     border-right: 1px solid #adb5bd !important;
   }
+  #part_1 textarea {
+    min-height: 100px !important;
+    max-height: 100px !important;
+  }
 }
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
