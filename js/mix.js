@@ -1,6 +1,12 @@
 $(function () {
   var vocabularyList = [];
   var definitionList = [];
+  var userVerbsList = [];
+  var verbsList = [];
+  var userNounsList = [];
+  var nounsList = [];
+  var userAdjectivesList = [];
+  var adjectivesList = [];
 
   var vocabulary = [
     {
@@ -238,8 +244,8 @@ $(function () {
         "a ceremony; something that is done in the same way every time",
     },
   ];
-  
-  function randomWords(words) {
+
+  function randomWords(words, number) {
     const shuffledWords = [...words]; // Make a copy of the input array
     for (let i = shuffledWords.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -248,11 +254,58 @@ $(function () {
         shuffledWords[i],
       ];
     }
-    return shuffledWords.slice(0, 10);
+    return shuffledWords.slice(0, number);
+  }
+
+  function getRandomWordsWithN_V_Adj(words) {
+    const types = ["n", "v", "adj"];
+
+    // filter words to only include the desired types
+    const filteredWords = words.filter((word) => types.includes(word.type));
+
+    // group and shuffle the remaining words by type
+    const groupedWords = filteredWords.reduce((groups, word) => {
+      const type = word.type;
+      if (!groups[type]) {
+        groups[type] = [];
+      }
+      groups[type].push(word);
+      return groups;
+    }, {});
+
+    const shuffledWords = Object.keys(groupedWords).reduce((shuffled, type) => {
+      shuffled[type] = shuffle(groupedWords[type]);
+      return shuffled;
+    }, {});
+
+    // select 6 random words of each type and map them to objects
+    const randomWords = types.flatMap((type) => {
+      return shuffledWords[type].slice(0, 5).map((word) => ({
+        name: word.name,
+        type: word.type,
+      }));
+    });
+
+    return randomWords;
+  }
+
+  // shuffle function (for shuffling the words within each group)
+  function shuffle(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  function dispplayVocabulary_1(list_1) {
+    var names = list_1.map((word) => word.name);
+    return $("#list_1").html(names.join(" "));
   }
 
   function displayVocabulary(vocabulary) {
-    vocabularyList = randomWords(vocabulary);
+    vocabularyList = randomWords(vocabulary, 10);
     let vocaText = "<ol>";
     vocabularyList.forEach((word, index) => {
       vocaText += `<li>${
@@ -266,7 +319,7 @@ $(function () {
   }
 
   function displaydefinition(vocabulary) {
-    definitionList = randomWords(vocabulary).slice(0, 10);
+    definitionList = randomWords(vocabulary, 10);
     let vocaText = "<ol type='a'>";
     definitionList.forEach((word) => {
       vocaText += `<li>${word.definition}</li>`;
@@ -286,6 +339,65 @@ $(function () {
     return String.fromCharCode(definition + 96);
   }
 
+  function filterVocabularyByType(vocabularyList) {
+    for (let i = 0; i < vocabularyList.length; i++) {
+      const vocabulary = vocabularyList[i];
+      if (vocabulary.type === "n") {
+        nounsList.push(vocabulary.name);
+      } else if (vocabulary.type === "v") {
+        verbsList.push(vocabulary.name);
+      } else if (vocabulary.type == "adj") {
+        adjectivesList.push(vocabulary.name);
+      }
+    }
+  }
+  function compareLists(userList, referenceList, type) {
+    var source = 0;
+    const matchingItems = [];
+    var nonMatchingItems = [];
+
+    userList.forEach((item) => {
+      if (
+        type === "adj" &&
+        referenceList.includes(item) &&
+        adjectivesList.includes(item)
+      ) {
+        matchingItems.push(item);
+        source++;
+      } else if (
+        type === "noun" &&
+        referenceList.includes(item) &&
+        nounsList.includes(item)
+      ) {
+        matchingItems.push(item);
+        source++;
+      } else if (
+        type === "verb" &&
+        referenceList.includes(item) &&
+        verbsList.includes(item)
+      ) {
+        matchingItems.push(item);
+        source++;
+      }
+    });
+    nonMatchingItems = referenceList.filter((item) => !userList.includes(item));
+
+    return { matching: matchingItems, notMatching: nonMatchingItems, source };
+  }
+
+  function getSource_displayAnwser(user, original, type) {
+    const comparison = compareLists(user, original, type);
+    var matching = comparison.matching ? comparison.matching.join(", ") : "";
+    var notMatching = comparison.notMatching
+      ? comparison.notMatching.join(", ")
+      : "";
+    $(`#${type}s_anwser`).html(`${matching}`);
+    $(`#${type}s_anwser`).append(
+      `<br><span class="fw-b text-danger"> ${notMatching}</span>`
+    );
+    return comparison.source;
+  }
+
   function processEmptyAnswer(emptyAnswer) {
     var names = emptyAnswer.map((word) => word.name);
     var emptyAnswerString = names.join(", ");
@@ -297,9 +409,14 @@ $(function () {
     );
   }
 
-  const randomVocabulary = randomWords(vocabulary);
+  const randomVocabulary = randomWords(vocabulary, 10);
+  var randomWordsWithN_V_Adj = getRandomWordsWithN_V_Adj(vocabulary, 15);
+  var list_1 = randomWords(randomWordsWithN_V_Adj);
+
   displaydefinition(randomVocabulary);
   displayVocabulary(randomVocabulary);
+  dispplayVocabulary_1(list_1);
+
   $("#check").on("click", function () {
     var source = 0;
     var incorrectVocabulary = [];
@@ -353,5 +470,58 @@ $(function () {
     $(this).addClass("d-none");
     $("#message").addClass("d-none");
     $("#check").removeClass("d-none");
+  });
+
+  // onclick function for Part 1
+  $("#check_part_1").on("click", function () {
+    var totalSource = 0;
+    var nouns_string = $("#nouns").val();
+    userNounsList = nouns_string.split(", ").map(function (item) {
+      return item.trim();
+    });
+    var verbs_string = $("#verbs").val();
+    userVerbsList = verbs_string.split(", ").map(function (item) {
+      return item.trim();
+    });
+    var adjs_string = $("#adjs").val();
+    userAdjectivesList = adjs_string.split(", ").map(function (item) {
+      return item.trim();
+    });
+    filterVocabularyByType(randomWordsWithN_V_Adj);
+    totalSource += getSource_displayAnwser(userNounsList, nounsList, "noun");
+    totalSource += getSource_displayAnwser(userVerbsList, verbsList, "verb");
+    totalSource += getSource_displayAnwser(
+      userAdjectivesList,
+      adjectivesList,
+      "adj"
+    );
+
+    $("textarea, #check_part_1").addClass("d-none");
+    $("textarea").val("");
+    $("#nouns_anwser, #verbs_anwser, #adjs_anwser").removeClass("d-none");
+    if (totalSource < 15) {
+      $("#message_part_1").html(`You are correct ${totalSource}/15.`);
+    } else {
+      $("#message_part_1").html(
+        "Great job! You got a perfect 15 out of 15! You're so smart because you have learned of them by an awesome, beautiful, capable, delightful, enthusiastic, helpful, generous, intelligent, outgoing, and positive  ESL professor. 🎉👍"
+      );
+    }
+    $("#message_part_1, #new_part_1").removeClass("d-none");
+  });
+  $("#new_part_1").on("click", function () {
+    verbsList = [];
+    userNounsList = [];
+    nounsList = [];
+    userAdjectivesList = [];
+    adjectivesList = [];
+    randomWordsWithN_V_Adj = getRandomWordsWithN_V_Adj(vocabulary, 15);
+    list_1 = randomWords(randomWordsWithN_V_Adj);
+    dispplayVocabulary_1(list_1);
+    $("#nouns_anwser, #verbs_anwser, #adjs_anwser, #new_part_1").addClass(
+      "d-none"
+    );
+    $("#nouns_anwser, #verbs_anwser, #adjs_anwser").html("");
+    $("#message_part_1").addClass("d-none");
+    $("#check_part_1, textarea").removeClass("d-none");
   });
 });
