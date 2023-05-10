@@ -151,7 +151,7 @@ $(function () {
     {
       name: "ignore",
       type: "v",
-      definition: "intentionally listen or give attention",
+      definition: "not pay attention to something or someome",
     },
     {
       name: "curious",
@@ -424,6 +424,30 @@ $(function () {
   displayVocabulary(randomVocabulary);
   dispplayVocabulary_1(list_1);
 
+  function addFireworks() {
+    const container = document.querySelector(".fireworks");
+    const fireworks = new Fireworks.default(container, {
+      autoresize: true,
+      opacity: 0.5,
+      sound: {
+        enabled: true,
+        files: [
+          "sounds/explosion0.mp3",
+          "sounds/explosion1.mp3",
+          "sounds/explosion2.mp3",
+        ],
+        volume: {
+          min: 4,
+          max: 8,
+        },
+      },
+    });
+    fireworks.start();
+    setTimeout(() => {
+      fireworks.stop();
+    }, 3000);
+  }
+
   $("#check").on("click", function () {
     var source = 0;
     var incorrectVocabulary = [];
@@ -502,13 +526,13 @@ $(function () {
       adjectivesList,
       "adj"
     );
-
     $("textarea, #check_part_1").addClass("d-none");
     $("textarea").val("");
     $("#nouns_anwser, #verbs_anwser, #adjs_anwser").removeClass("d-none");
     if (totalSource < 15) {
       $("#message_part_1").html(`You are correct ${totalSource}/15.`);
     } else {
+      addFireworks();
       $("#message_part_1").html(
         "Great job! You got a perfect 15 out of 15! You're so smart because you have learned of them by an awesome, beautiful, capable, delightful, enthusiastic, helpful, generous, intelligent, outgoing, and positive  ESL professor. 🎉👍"
       );
