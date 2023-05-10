@@ -13,8 +13,6 @@ $(function () {
       navigator.userAgent
     );
 
-  // Add click event listener to scroll to top button if on mobile device
-
   var vocabulary = [
     {
       name: "especially",
@@ -556,6 +554,7 @@ $(function () {
     $("#check_part_1, textarea").removeClass("d-none");
   });
   if (isMobile) {
+    // Add click event listener to scroll to top button if on mobile device
     $("#check_part_1").on("click", function () {
       $("html, body").animate({ scrollTop: 150 }, 500);
       return false;

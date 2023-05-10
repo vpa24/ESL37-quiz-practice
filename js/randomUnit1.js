@@ -127,13 +127,13 @@ $(function () {
       if ($("#message").hasClass("alert-warning")) {
         $("#message").removeClass("alert-warning");
       }
-      if (source < 10) {
+      if (source < 7) {
         $("#message ").html(
-          `You are correct ${source}/10. You should learn the definition of <strong>${errorString}</strong> again.`
+          `You are correct ${source}/7. You should learn the definition of <strong>${errorString}</strong> again.`
         );
       } else {
         $("#message").html(
-          `Great job! You got a perfect 10 out of 10! You're amazing!! 🎉👍`
+          `Great job! You got a perfect 7 out of 7! You're amazing!! 🎉👍`
         );
       }
       $(this).addClass("d-none");
