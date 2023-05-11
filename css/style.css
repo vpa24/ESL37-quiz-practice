@@ -164,3 +164,7 @@ cite {
   text-transform: uppercase;
   color: hsl(0 0% 20%);
 }
+.list-link,
+img {
+  height: 280px !important;
+}
