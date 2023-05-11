@@ -135,9 +135,9 @@ $(function () {
       if ($("#message").hasClass("alert-warning")) {
         $("#message").removeClass("alert-warning");
       }
-      if (source < 10) {
+      if (source < 9) {
         $("#message ").html(
-          `You are correct ${source}/10. You should learn the definition of <strong>${errorString}</strong> again.`
+          `You are correct ${source}/9. You should learn the definition of <strong>${errorString}</strong> again.`
         );
       } else {
         $("#message").html(
