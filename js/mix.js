@@ -507,11 +507,11 @@ $(function () {
     var totalSource = 0;
     var nouns_string = $("#nouns").val();
     userNounsList = nouns_string.split(", ").map(function (item) {
-      return item.trim();
+      return item.toLowerCase().trim();
     });
     var verbs_string = $("#verbs").val();
     userVerbsList = verbs_string.split(", ").map(function (item) {
-      return item.trim();
+      return item.toLowerCase().trim();
     });
     var adjs_string = $("#adjs").val();
     userAdjectivesList = adjs_string.split(", ").map(function (item) {
