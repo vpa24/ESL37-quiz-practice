@@ -1,7 +1,6 @@
 :root {
   --type-body: Open Sans, Helvetica, Arial, sans-serif;
   --type-quote: Vollkorn;
-  --quote-image-width: 140px;
   --border-rad: 7px;
   --accent-color: hsl(322deg 85% 65%);
   --quote-bg: hsl(0 0% 97%);
@@ -42,6 +41,9 @@ footer {
   #part_1 textarea {
     min-height: 100px !important;
     max-height: 100px !important;
+  }
+  blockquote {
+    text-align: left !important;
   }
 }
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -109,13 +111,14 @@ input[type="text"] {
 blockquote {
   position: relative;
   margin: 40px 0;
-  padding: 1.6em 2.4em 0.7em calc(1.4em + var(--quote-image-width));
+  padding: 1.6em 2.4em 0.7em calc(1.4em);
   font: italic 1.2rem var(--type-quote);
-  background: var(--quote-bg) no-repeat left / var(--quote-image-width);
+  background: var(--quote-bg) no-repeat left;
   border-radius: var(--border-rad);
   border: 2px solid white;
   box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%);
   text-indent: 1.6em;
+  text-align: center;
 }
 blockquote::before {
   content: "";
