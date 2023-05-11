@@ -515,7 +515,7 @@ $(function () {
     });
     var adjs_string = $("#adjs").val();
     userAdjectivesList = adjs_string.split(", ").map(function (item) {
-      return item.trim();
+      return item.toLowerCase().trim();
     });
     filterVocabularyByType(randomWordsWithN_V_Adj);
     totalSource += getSource_displayAnwser(userNounsList, nounsList, "noun");
