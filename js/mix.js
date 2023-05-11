@@ -414,7 +414,7 @@ $(function () {
     );
   }
 
-  const randomVocabulary = randomWords(vocabulary, 10);
+  var randomVocabulary = randomWords(vocabulary, 10);
   var randomWordsWithN_V_Adj = getRandomWordsWithN_V_Adj(vocabulary, 15);
   var list_1 = randomWords(randomWordsWithN_V_Adj);
 
@@ -494,6 +494,7 @@ $(function () {
   });
 
   $("#new").on("click", function () {
+    randomVocabulary = randomWords(vocabulary, 10);
     displaydefinition(randomVocabulary);
     displayVocabulary(randomVocabulary);
     $(this).addClass("d-none");
