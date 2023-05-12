@@ -149,7 +149,7 @@ $(function () {
     {
       name: "ignore",
       type: "v",
-      definition: "not pay attention to something or someome",
+      definition: "to pay no attention to",
     },
     {
       name: "curious",

@@ -37,7 +37,7 @@ $(function () {
     },
     {
       name: "ignore",
-      definition: "intentionally listen or give attention",
+      definition: "to pay no attention to",
     },
     {
       name: "curious",
