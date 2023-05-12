@@ -5,11 +5,11 @@ $(function () {
   var vocabulary = [
     {
       name: "especially",
-      definition: "to a great extent; very much",
+      definition: "to a great extent; very much; particularly",
     },
     {
       name: "distracted",
-      definition: "unable to concentrate",
+      definition: "not able to concentrate or focus",
     },
     {
       name: "consume",
@@ -17,27 +17,27 @@ $(function () {
     },
     {
       name: "technique",
-      definition: "way of accomplishing something",
+      definition: "a way of doing something",
     },
     {
       name: "familiar",
-      definition: "easily to recoginzed",
+      definition: "well known or easy to recognize",
     },
     {
       name: "sophisticated",
-      definition: "complex/complicated",
+      definition: "complex or complicated",
     },
     {
       name: "monument",
-      definition: "a building that is build to honor a special person or event",
+      definition: "a structure built to honor a special person or event",
     },
     {
       name: "accurate",
-      definition: "correct/without any mistakes",
+      definition: "correct in all details; exact; with no mistakes",
     },
     {
       name: "measure",
-      definition: "discover the exact size or amount",
+      definition: "to determine the exact size, amount, or degree of something",
     },
   ];
   function randomWords(words) {

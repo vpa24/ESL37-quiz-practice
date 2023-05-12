@@ -22,26 +22,24 @@ $(function () {
     },
     {
       name: "represent",
-      definition: "to stand for -- or in place of  -- something else",
+      definition: "to stand for or in place of",
     },
     {
       name: "national",
-      definition:
-        "connected with a particular nation; shared by a whole nation",
+      definition: "connected or shared with a specific nation",
     },
     {
       name: "common",
-      definition:
-        "happening offen; existing in large numbers or in many places",
+      definition: "usual; shared by all; happening often",
     },
     {
       name: "additional",
-      definition: "more than was first mentioned or is usual",
+      definition: "extra to what already exists; more than what is usual",
     },
     {
       name: "decoration",
       definition:
-        "a thing that make something look more attractive on special occasions",
+        "something that makes another thing look more attractive on special occasions",
     },
     {
       name: "ritual",

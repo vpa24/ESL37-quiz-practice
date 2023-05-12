@@ -5,28 +5,27 @@ $(function () {
   var vocabulary = [
     {
       name: "countless",
-      definition: "too many to be counted: very many",
+      definition: "too many to be counted",
     },
     {
       name: "alley",
-      definition: "a narrow street or passage between building",
+      definition: "a narrow street behind or between buildings",
     },
     {
       name: "audience",
-      definition:
-        "a group of people who gather together to listen to something or watch something",
+      definition: "a group of people who listen to or watch something",
     },
     {
       name: "immediately",
-      definition: "without any delay",
+      definition: "right away; with no delay",
     },
     {
       name: "distant",
-      definition: "existing or happening far away in space: separated by space",
+      definition: "far away in space or time",
     },
     {
       name: "mobile",
-      definition: "able to move from one place to another",
+      definition: "able to move easily from one place to another",
     },
     {
       name: "community",
@@ -35,11 +34,12 @@ $(function () {
     },
     {
       name: "success",
-      definition: "the fact of getting or achieving wealth, respect, or fame",
+      definition:
+        "getting or achieving wealth, respect, or fame; accomplishing a goal or purpose",
     },
     {
       name: "narrow",
-      definition: "long and not wide: small from one side to the other side",
+      definition: "not wide; small from one side to the other side",
     },
   ];
   function randomWords(words) {

@@ -17,20 +17,22 @@ $(function () {
     },
     {
       name: "lifestyle",
-      definition:
-        "a specific way of living; the way as person lives or a group of people live",
+      definition: "The way in which a person or group lives",
     },
     {
       name: "valuable",
-      definition: "worth a lot of money; useful or important",
+      definition:
+        "somthing that is worth a lot of money or is important in some way",
     },
     {
       name: "affluent",
-      definition: "having a lot of money and good standard of living",
+      definition:
+        "rich; wealthy; having a lot of money and good standard of living",
     },
     {
       name: "give up",
-      definition: "to stop doing or having something",
+      definition:
+        "to stop doing or having (something, such as a habitual activity, smoking, drinking, a job, etc.)",
     },
   ];
 

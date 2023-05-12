@@ -5,15 +5,15 @@ $(function () {
   var vocabulary = [
     {
       name: "stare",
-      definition: "look for a long time with the eyes wide open",
+      definition: "look at something for a long time with the eyes wide open",
     },
     {
       name: "instant",
-      definition: "happen immediately",
+      definition: "happen immediately or in a very short period of time",
     },
     {
       name: "toddler",
-      definition: "a young child learning to walk",
+      definition: "a young child who has only recently learned to walk",
     },
     {
       name: "physical",
@@ -21,19 +21,21 @@ $(function () {
     },
     {
       name: "difference",
-      definition: "things that are not the same",
+      definition: "something that makes one person or thing NOT like another",
     },
     {
       name: "material",
-      definition: "a physical subtance that things can be made from",
+      definition: "the matter from which a thing is or can be made from",
     },
     {
       name: "criticize",
-      definition: "to express disapproval of someone or something",
+      definition:
+        "indicate disapproval of (someone or something) in a disapproving way; finding faults",
     },
     {
       name: "patience",
-      definition: "the ability without complaint",
+      definition:
+        "tolerant and understanding; the ability to wait without complaint",
     },
     {
       name: "ignore",
@@ -41,7 +43,7 @@ $(function () {
     },
     {
       name: "curious",
-      definition: "interested in something",
+      definition: "wanting to know more about things",
     },
   ];
 

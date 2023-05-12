@@ -17,12 +17,12 @@ $(function () {
     {
       name: "especially",
       type: "adv",
-      definition: "to a great extent; very much",
+      definition: "to a great extent; very much; particularly",
     },
     {
       name: "distracted",
       type: "adj",
-      definition: "unable to concentrate",
+      definition: "not able to concentrate or focus",
     },
     {
       name: "consume",
@@ -32,63 +32,62 @@ $(function () {
     {
       name: "technique",
       type: "n",
-      definition: "way of accomplishing something",
+      definition: "a way of doing something",
     },
     {
       name: "familiar",
       type: "adj",
-      definition: "easily to recoginzed",
+      definition: "well known or easy to recognize",
     },
     {
       name: "sophisticated",
       type: "adj",
-      definition: "complex/complicated",
+      definition: "complex or complicated",
     },
     {
       name: "monument",
       type: "n",
-      definition: "a building that is build to honor a special person or event",
+      definition: "a structure built to honor a special person or event",
     },
     {
       name: "accurate",
       type: "adj",
-      definition: "correct/without any mistakes",
+      definition: "correct in all details; exact; with no mistakes",
     },
     {
       name: "measure",
       type: "v",
-      definition: "discover the exact size or amount",
+      definition: "to determine the exact size, amount, or degree of something",
     },
     {
       name: "countless",
       type: "adj",
-      definition: "too many to be counted: very many",
+      definition: "too many to be counted",
     },
     {
       name: "alley",
       type: "n",
-      definition: "a narrow street or passage between building",
+      definition: "a narrow street behind or between buildings",
     },
     {
       name: "audience",
       type: "n",
-      definition:
-        "a group of people who gather together to listen to something or watch something",
+      definition: "a group of people who listen to or watch something",
     },
     {
       name: "immediately",
       type: "adv",
-      definition: "without any delay",
+      definition: "right away; with no delay",
     },
     {
       name: "distant",
       type: "adj",
-      definition: "existing or happening far away in space: separated by space",
+      definition: "far away in space or time",
     },
     {
       name: "mobile",
       type: "adj",
-      definition: "able to move from one place to another",
+      definition: "able to move easily from one place to another",
     },
     {
       name: "community",
@@ -99,22 +98,23 @@ $(function () {
     {
       name: "success",
       type: "n",
-      definition: "the fact of getting or achieving wealth, respect, or fame",
+      definition:
+        "getting or achieving wealth, respect, or fame; accomplishing a goal or purpose",
     },
     {
       name: "narrow",
       type: "adj",
-      definition: "long and not wide: small from one side to the other side",
+      definition: "not wide; small from one side to the other side",
     },
     {
       name: "stare",
       type: "v",
-      definition: "look for a long time with the eyes wide open",
+      definition: "look at something for a long time with the eyes wide open",
     },
     {
       name: "instant",
       type: "adj",
-      definition: "happen immediately",
+      definition: "happen immediately or in a very short period of time",
     },
     {
       name: "toddler",
@@ -129,22 +129,24 @@ $(function () {
     {
       name: "difference",
       type: "n",
-      definition: "things that are not the same",
+      definition: "something that makes one person or thing NOT like another",
     },
     {
       name: "material",
       type: "n",
-      definition: "a physical subtance that things can be made from",
+      definition: "the matter from which a thing is or can be made from",
     },
     {
       name: "criticize",
       type: "v",
-      definition: "to express disapproval of someone or something",
+      definition:
+        "indicate disapproval of (someone or something) in a disapproving way; finding faults",
     },
     {
       name: "patience",
       type: "n",
-      definition: "the ability without complaint",
+      definition:
+        "tolerant and understanding; the ability to wait without complaint",
     },
     {
       name: "ignore",
@@ -154,7 +156,7 @@ $(function () {
     {
       name: "curious",
       type: "adj",
-      definition: "interested in something",
+      definition: "wanting to know more about things",
     },
     {
       name: "driveway",
@@ -175,23 +177,25 @@ $(function () {
     {
       name: "lifestyle",
       type: "n",
-      definition:
-        "a specific way of living; the way as person lives or a group of people live",
+      definition: "The way in which a person or group lives",
     },
     {
       name: "valuable",
       type: "adj",
-      definition: "worth a lot of money; useful or important",
+      definition:
+        "somthing that is worth a lot of money or is important in some way",
     },
     {
       name: "affluent",
       type: "adj",
-      definition: "having a lot of money and good standard of living",
+      definition:
+        "rich; wealthy; having a lot of money and good standard of living",
     },
     {
       name: "give up",
       type: "phrasal verb",
-      definition: "to stop doing or having something",
+      definition:
+        "to stop doing or having (something, such as a habitual activity, smoking, drinking, a job, etc.)",
     },
     {
       name: "victory",
@@ -217,30 +221,28 @@ $(function () {
     {
       name: "represent",
       type: "v",
-      definition: "to stand for -- or in place of  -- something else",
+      definition: "to stand for or in place of",
     },
     {
       name: "national",
       type: "adj",
-      definition:
-        "connected with a particular nation; shared by a whole nation",
+      definition: "connected or shared with a specific nation",
     },
     {
       name: "common",
       type: "adj",
-      definition:
-        "happening offen; existing in large numbers or in many places",
+      definition: "usual; shared by all; happening often",
     },
     {
       name: "additional",
       type: "adj",
-      definition: "more than was first mentioned or is usual",
+      definition: "extra to what already exists; more than what is usual",
     },
     {
       name: "decoration",
       type: "n",
       definition:
-        "a thing that make something look more attractive on special occasions",
+        "something that makes another thing look more attractive on special occasions",
     },
     {
       name: "ritual",
