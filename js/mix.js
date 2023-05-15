@@ -535,7 +535,7 @@ $(function () {
     } else {
       addFireworks();
       $("#message_part_1").html(
-        "Great job! You got a perfect 15 out of 15! You're so smart because you have learned of them by an awesome, beautiful, capable, delightful, enthusiastic, helpful, generous, intelligent, outgoing, and positive  ESL professor. 🎉👍"
+        "Great job! You got a perfect 15 out of 15! You're so smart because you have learned of them by an awesome, beautiful, capable, dedicated, enthusiastic, helpful, generous, intelligent, outgoing, and positive  ESL professor. 🎉👍"
       );
     }
     $("#message_part_1, #new_part_1").removeClass("d-none");
